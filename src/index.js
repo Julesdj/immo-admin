@@ -5,7 +5,7 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { Provider } from "react-redux";
 import "./index.css";
 import glogalReducer from "state";
-import api from "state/api";
+import { api } from "state/api";
 import App from "./App";
 
 const store = configureStore({
