@@ -49,7 +49,7 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
                     <IconButton
                         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                     >
-                        <MenuIcon sx={{ fontSize: "25px" }} />
+                        <MenuIcon sx={{ fontSize: "32px" }} />
                     </IconButton>
                     <FlexBetween
                         backgroundColor={theme.palette.background.alt}
