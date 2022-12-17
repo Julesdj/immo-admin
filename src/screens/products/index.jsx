@@ -112,7 +112,11 @@ function ProductWithStats() {
                     )}
                 </Box>
             ) : (
-                <>Loading ...</>
+                <Box height="100%" width="100%" textAlign="center">
+                    <Typography variant="h2" m="20% auto">
+                        Loading ...
+                    </Typography>
+                </Box>
             )}
         </Box>
     );

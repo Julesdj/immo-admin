@@ -53,7 +53,7 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
                     </IconButton>
                     <FlexBetween
                         backgroundColor={theme.palette.background.alt}
-                        borderRadius="9px"
+                        borderRadius="8px"
                         gap="3rem "
                         p="0.1rem 1.25rem"
                     >
