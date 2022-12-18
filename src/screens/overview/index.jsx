@@ -8,9 +8,13 @@ function Overview() {
 
     return (
         <Box m="1.5rem 2.5rem">
-            <Header title="Overview" subtitle="Overview of general revenue" />
+            <Header
+                title="Overview"
+                subtitle="Overview of general sales drends"
+            />
             <Box height="70vh">
                 <FormControl sx={{ mt: "1rem" }}>
+                    <InputLabel>View</InputLabel>
                     <Select
                         value={view}
                         label="View"

@@ -10,7 +10,7 @@ function OverviewChart({ isDashboard = false, view }) {
     const [totalSalesLine, totalUnitsLine] = useMemo(() => {
         if (!data) return [];
 
-        const { monthlyData } = data[0];
+        const { monthlyData } = data[0]; //Because i only have one object in my array, else needs looping
 
         const totalSalesLine = {
             id: "totalSales",
