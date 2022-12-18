@@ -10,7 +10,7 @@ function Overview() {
         <Box m="1.5rem 2.5rem">
             <Header
                 title="Overview"
-                subtitle="Overview of general sales drends"
+                subtitle="Overview of yearly general sales trends"
             />
             <Box height="70vh">
                 <FormControl sx={{ mt: "1rem" }}>
