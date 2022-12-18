@@ -5,10 +5,9 @@ import { useGetSalesQuery } from "state/api";
 function BreakdownChart({ isDashboard = false }) {
     const { data, isLoading } = useGetSalesQuery();
     const theme = useTheme();
-    console.log(data);
 
-    const { salesByCategory, yearlySalesTotal } = data[0];
     if (!data || isLoading) return "Loading...";
+    const { salesByCategory, yearlySalesTotal } = data[0]; //Because i only have one object in my array, else needs looping
 
     const colors = [
         theme.palette.secondary[500],
