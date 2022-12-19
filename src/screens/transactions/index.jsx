@@ -74,7 +74,7 @@ function Transactions() {
                         borderBottom: "none",
                     },
                     "& .MuiDataGrid-virtualScroller": {
-                        backgroundColor: theme.palette.primary.light,
+                        backgroundColor: theme.palette.primary.alt,
                     },
                     "& .MuiDataGrid-footerContainer": {
                         backgroundColor: theme.palette.background.alt,
@@ -88,11 +88,11 @@ function Transactions() {
             >
                 <DataGrid
                     loading={isLoading || !data}
+                    rows={(data && data.transactions) || []}
                     getRowId={(row) => row._id}
-                    rows={data ? data.transactions : []}
                     rowsPerPageOptions={[20, 50, 100]}
                     columns={columns}
-                    rowCount={data ? data.total : 0}
+                    rowCount={(data && data.total) || 0}
                     pagination
                     page={page}
                     pageSize={pageSize}

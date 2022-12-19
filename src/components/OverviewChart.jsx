@@ -110,10 +110,6 @@ function OverviewChart({ isDashboard = false, view }) {
                 legendPosition: "middle",
             }}
             axisLeft={{
-                format: (v) => {
-                    if (isDashboard) return v.slice(0, 3);
-                    return v;
-                },
                 orient: "left",
                 tickSize: 5,
                 tickPadding: 5,

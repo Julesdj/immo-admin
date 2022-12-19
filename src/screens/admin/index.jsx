@@ -74,7 +74,7 @@ function Admin() {
                         borderBottom: "none",
                     },
                     "& .MuiDataGrid-virtualScroller": {
-                        backgroundColor: theme.palette.primary.light,
+                        backgroundColor: theme.palette.primary.alt,
                     },
                     "& .MuiDataGrid-footerContainer": {
                         backgroundColor: theme.palette.background.alt,

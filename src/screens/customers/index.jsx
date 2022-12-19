@@ -70,7 +70,7 @@ function Customers() {
                         borderBottom: "none",
                     },
                     "& .MuiDataGrid-virtualScroller": {
-                        backgroundColor: theme.palette.primary.light,
+                        backgroundColor: theme.palette.primary.alt,
                     },
                     "& .MuiDataGrid-footerContainer": {
                         backgroundColor: theme.palette.background.alt,
@@ -83,8 +83,8 @@ function Customers() {
                 }}
             >
                 <DataGrid
-                    rows={data || []}
                     lading={isLoading || !data}
+                    rows={data || []}
                     getRowId={(row) => row._id}
                     columns={columns}
                 />

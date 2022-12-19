@@ -82,7 +82,13 @@ function ProductWithStats() {
                 title="Products Stats"
                 subtitle="List of products with stats"
             />
-            {data || !isLoading ? (
+            {!data || isLoading ? (
+                <Box height="100%" width="100%" textAlign="center">
+                    <Typography variant="h2" m="20% auto">
+                        Loading ...
+                    </Typography>
+                </Box>
+            ) : (
                 <Box
                     mt="1.5rem"
                     display="grid"
@@ -110,12 +116,6 @@ function ProductWithStats() {
                             />
                         )
                     )}
-                </Box>
-            ) : (
-                <Box height="100%" width="100%" textAlign="center">
-                    <Typography variant="h2" m="20% auto">
-                        Loading ...
-                    </Typography>
                 </Box>
             )}
         </Box>
