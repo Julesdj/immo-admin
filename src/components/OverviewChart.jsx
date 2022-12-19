@@ -3,7 +3,7 @@ import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { useGetSalesQuery } from "state/api";
 
-function OverviewChart({ isDashboard = false, view }) {
+function OverviewChart({ isDashboard = false, enableArea = false, view }) {
     const theme = useTheme();
     const { data, isLoading } = useGetSalesQuery();
 
@@ -130,6 +130,7 @@ function OverviewChart({ isDashboard = false, view }) {
             pointBorderColor={{ from: "serieColor" }}
             pointLabelYOffset={-12}
             useMesh={true}
+            enableArea={enableArea}
             legends={
                 !isDashboard
                     ? [

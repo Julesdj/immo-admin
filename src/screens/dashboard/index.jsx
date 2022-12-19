@@ -82,6 +82,7 @@ const Dashboard = () => {
 
             <Box
                 mt="20px"
+                pb="2rem"
                 display="grid"
                 gridTemplateColumns="repeat(12, 1fr)"
                 gridAutoRows="160px"
@@ -128,7 +129,11 @@ const Dashboard = () => {
                     p="1rem"
                     borderRadius="0.55rem"
                 >
-                    <OverviewChart view="sales" isDashboard={true} />
+                    <OverviewChart
+                        view="sales"
+                        isDashboard={true}
+                        enableArea={true}
+                    />
                 </Box>
                 <StatBox
                     title="Monthly Sales"
