@@ -29,7 +29,7 @@ const ProductCard = ({ product, yearlySalesTotal, yearlyTotalSoldUnits }) => {
             <CardContent>
                 <Typography
                     fontSize={14}
-                    color={theme.palette.secondary[700]}
+                    color={theme.palette.secondary[600]}
                     gutterBottom
                 >
                     {product.category}
@@ -77,7 +77,7 @@ function ProductWithStats() {
     const { data, isLoading } = useGetProductStatsQuery();
     const isNotMobile = useMediaQuery("(min-width: 1024px)");
     return (
-        <Box m="1.5rem 2.5rem">
+        <Box m="1.5rem 2.5rem" pb="2rem">
             <Header
                 title="Products Stats"
                 subtitle="List of products with stats"

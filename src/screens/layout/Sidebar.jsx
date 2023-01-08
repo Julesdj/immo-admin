@@ -124,7 +124,17 @@ function Sidebar({
                                 }
                                 const lowercaseText = text.toLowerCase();
                                 return (
-                                    <ListItem key={text} disablePadding>
+                                    <ListItem
+                                        key={text}
+                                        disablePadding
+                                        sx={{
+                                            "&:hover": {
+                                                background:
+                                                    theme.palette
+                                                        .secondary[300],
+                                            },
+                                        }}
+                                    >
                                         <ListItemButton
                                             onClick={() => {
                                                 navigate(`/${lowercaseText}`);
@@ -136,10 +146,11 @@ function Sidebar({
                                                         ? theme.palette
                                                               .secondary[300]
                                                         : "transparent",
+
                                                 color:
                                                     active === lowercaseText
-                                                        ? theme.palette
-                                                              .primary[600]
+                                                        ? theme.palette.color
+                                                              .alt
                                                         : theme.palette
                                                               .secondary[100],
                                             }}
@@ -150,7 +161,7 @@ function Sidebar({
                                                     color:
                                                         active === lowercaseText
                                                             ? theme.palette
-                                                                  .primary[600]
+                                                                  .color.alt
                                                             : theme.palette
                                                                   .secondary[200],
                                                 }}
