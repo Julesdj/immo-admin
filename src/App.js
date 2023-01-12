@@ -16,6 +16,8 @@ import Monthly from "screens/monthly";
 import Breakdown from "screens/breakdown";
 import Admin from "screens/admin";
 import Performance from "screens/admin/Performance";
+import Login from "components/Login";
+import ProtectedRoutes from "services/ProtectedRoutes";
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -26,31 +28,47 @@ function App() {
                 <ThemeProvider theme={theme}>
                     <CssBaseline />
                     <Routes>
-                        <Route element={<Layout />}>
-                            <Route
-                                path="/"
-                                element={<Navigate to="/dashboard" replace />}
-                            />
-                            <Route path="/dashboard" element={<Dashboard />} />
-                            <Route
-                                path="products"
-                                element={<ProductWithStats />}
-                            />
-                            <Route path="customers" element={<Customers />} />
-                            <Route
-                                path="transactions"
-                                element={<Transactions />}
-                            />
-                            <Route path="geography" element={<Geography />} />
-                            <Route path="overview" element={<Overview />} />
-                            <Route path="daily" element={<Daily />} />
-                            <Route path="monthly" element={<Monthly />} />
-                            <Route path="breakdown" element={<Breakdown />} />
-                            <Route path="admin" element={<Admin />} />
-                            <Route
-                                path="performance"
-                                element={<Performance />}
-                            />
+                        <Route
+                            path="/"
+                            element={<Navigate to="/login" replace />}
+                        />
+                        <Route path="/login" element={<Login />} />
+
+                        <Route element={<ProtectedRoutes />}>
+                            <Route element={<Layout />}>
+                                <Route
+                                    path="/dashboard"
+                                    element={<Dashboard />}
+                                />
+                                <Route
+                                    path="products"
+                                    element={<ProductWithStats />}
+                                />
+                                <Route
+                                    path="customers"
+                                    element={<Customers />}
+                                />
+                                <Route
+                                    path="transactions"
+                                    element={<Transactions />}
+                                />
+                                <Route
+                                    path="geography"
+                                    element={<Geography />}
+                                />
+                                <Route path="overview" element={<Overview />} />
+                                <Route path="daily" element={<Daily />} />
+                                <Route path="monthly" element={<Monthly />} />
+                                <Route
+                                    path="breakdown"
+                                    element={<Breakdown />}
+                                />
+                                <Route path="admin" element={<Admin />} />
+                                <Route
+                                    path="performance"
+                                    element={<Performance />}
+                                />
+                            </Route>
                         </Route>
                     </Routes>
                 </ThemeProvider>

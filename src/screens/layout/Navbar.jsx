@@ -5,6 +5,7 @@ import {
     Search,
     SettingsOutlined,
     ArrowDropDownOutlined,
+    Logout,
 } from "@mui/icons-material";
 import {
     Avatar,
@@ -17,14 +18,18 @@ import {
     Box,
     Typography,
     Menu,
+    MenuItem,
 } from "@mui/material";
 import { useDispatch } from "react-redux";
 import FlexBetween from "components/FlexBetween";
 import { setMode } from "state";
 import { useState } from "react";
+import { logout } from "services/authn.service";
+import { useNavigate } from "react-router-dom";
 // import profileImage from 'assets/profile.jpeg'
 
-function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
+function Navbar({ user, isSidebarOpen, setIsSidebarOpen, isNotMobile }) {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const theme = useTheme();
 
@@ -34,6 +39,11 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => setAnchorEl(null);
+
+    const handleLogout = () => {
+        logout();
+        navigate("/login", { replace: true });
+    };
 
     return (
         <AppBar
@@ -73,9 +83,11 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
                             <LightModeOutlined sx={{ fontSize: "25px" }} />
                         )}
                     </IconButton>
-                    <IconButton>
-                        <SettingsOutlined sx={{ fontSize: "25px" }} />
-                    </IconButton>
+                    {isNotMobile && (
+                        <IconButton>
+                            <SettingsOutlined sx={{ fontSize: "25px" }} />
+                        </IconButton>
+                    )}
                     <FlexBetween>
                         <Button
                             onClick={handleClick}
@@ -87,23 +99,28 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
                                 gap: "1rem",
                             }}
                         >
-                            {/* <Box component='img' alt="profile picture" src={profileImage} height='32px' width='32px' borderRadius='50%' sx={{objectFit: 'cover'}}/> */}
                             <Avatar height="32px" width="32px" />
-                            <Box textAlign="left">
-                                <Typography
-                                    fontWeight="bold"
-                                    fontSize="0.85rem"
-                                    sx={{ color: theme.palette.secondary[100] }}
-                                >
-                                    {user.name}
-                                </Typography>
-                                <Typography
-                                    fontSize="0.75rem"
-                                    sx={{ color: theme.palette.secondary[200] }}
-                                >
-                                    {user.occupation}
-                                </Typography>
-                            </Box>
+                            {isNotMobile && (
+                                <Box textAlign="left">
+                                    <Typography
+                                        fontWeight="bold"
+                                        fontSize="0.85rem"
+                                        sx={{
+                                            color: theme.palette.secondary[100],
+                                        }}
+                                    >
+                                        {user.name}
+                                    </Typography>
+                                    <Typography
+                                        fontSize="0.75rem"
+                                        sx={{
+                                            color: theme.palette.secondary[200],
+                                        }}
+                                    >
+                                        {user.occupation}
+                                    </Typography>
+                                </Box>
+                            )}
                             <ArrowDropDownOutlined
                                 sx={{
                                     color: theme.palette.secondary[200],
@@ -120,7 +137,28 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
                                 horizontal: "center",
                             }}
                         >
-                            Log Out
+                            <MenuItem>
+                                <Button
+                                    variant="outlined"
+                                    endIcon={<Logout />}
+                                    onClick={handleLogout}
+                                    sx={{
+                                        // backgroundColor:
+                                        //     theme.palette.secondary.light,
+                                        border: `1px solid ${theme.palette.secondary.main}`,
+                                        color: theme.palette.secondary.main,
+                                        fontSize: "14px",
+                                        fontWeight: "bold",
+                                        padding: "10px 20px",
+                                        "&:hover": {
+                                            bgcolor: theme.palette.transparent,
+                                            border: `1px solid ${theme.palette.secondary.main}`,
+                                        },
+                                    }}
+                                >
+                                    Log out
+                                </Button>
+                            </MenuItem>
                         </Menu>
                     </FlexBetween>
                 </FlexBetween>

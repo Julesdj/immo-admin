@@ -13,8 +13,17 @@ export const api = createApi({
         "Admins",
         "Performance",
         "Dashboard",
+        "UserLogin",
     ],
     endpoints: (builder) => ({
+        userLogin: builder.mutation({
+            query: (user) => ({
+                url: "api/auth",
+                method: "POST",
+                body: user,
+            }),
+            providesTags: ["UserLogin"],
+        }),
         getUser: builder.query({
             query: (id) => `api/users/${id}`,
             providesTags: ["User"],
@@ -68,4 +77,5 @@ export const {
     useGetAdminsQuery,
     useGetUserPerformanceQuery,
     useGetDashboardQuery,
+    useUserLoginMutation,
 } = api;

@@ -95,8 +95,12 @@ function Sidebar({
                                     alignItems="center"
                                     gap="0.5rem"
                                 >
-                                    <Typography variant="h4" fontWeight="bold">
-                                        ECOMDASH
+                                    <Typography
+                                        variant="h4"
+                                        fontWeight="bold"
+                                        fontSize="1.7rem"
+                                    >
+                                        IMMO INC.
                                     </Typography>
                                 </Box>
                                 {!isNotMobile && (
