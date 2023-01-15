@@ -48,10 +48,10 @@ Light mode:
 
 ## Installation
 
-* Clone the repository: git clone https://github.com/Julesdj/immo-admin.git
-* Install the dependencies: npm install
-* Start the client: npm start
-* Create a .env.local file and copy-paste this variabe: REACT_APP_BASE_URL=http://localhost:8080/
+* Clone the repository: `git clone https://github.com/Julesdj/immo-admin.git`
+* Install the dependencies: `npm install`
+* Create a `.env.local` file and copy-paste this variabe: `REACT_APP_BASE_URL=http://localhost:8080/`
+* Start the client: `npm start`
 
 ## Contribution
 
