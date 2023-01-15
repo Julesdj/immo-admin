@@ -9,10 +9,10 @@ I really enjoyed working on this and spent any time I could on it. It's an expan
 The project is deployed and the demo can be tested [here] --link to demo
 
 Dark mode:
-![Dashboard dark version screenshot]('./../public/screenshot-dark-mode.png')
+![Dashboard dark version screenshot](./public/screenshot-dark-mode.png)
 
 Light mode:
-![Dashboard light version screenshot]('./../public/screenshot-light-mode.png')
+![Dashboard light version screenshot](./public/screenshot-light-mode.png)
 
 \*\* If I had more time I would have:
 
