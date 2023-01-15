@@ -48,10 +48,13 @@ Light mode:
 
 ## Installation
 
-* Clone the repository: git clone https://github.com/Julesdj/immo-admin.git
-* Install the dependencies: npm install
-* Start the client: npm start
+* Clone the repository
+    git clone https://github.com/Julesdj/immo-admin.git
+* Install the dependencies
+    npm install
+* Start the client
+    npm start
 
 ## Contribution
 
-    If you would like to contribute to this project, please fork the repository and make a pull request. I welcome any contributions to improve the functionality of the admin dashboard.
+If you would like to contribute to this project, please fork the repository and make a pull request. I welcome any contributions to improve the functionality of the admin dashboard.
