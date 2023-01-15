@@ -4,25 +4,25 @@
 
 ## Overview
 
-    I really enjoyed working on this and spent any time I could on it. It's an expandable project and for my self-development I will absolutely continue to work on it and implement more features and improvements.
+I really enjoyed working on this and spent any time I could on it. It's an expandable project and for my self-development I will absolutely continue to work on it and implement more features and improvements.
 
-    The project is deployed and the demo can be tested [here] --link to demo
+The project is deployed and the demo can be tested [here] --link to demo
 
-    Dark mode:
-    ![]('./../public/screenshot-dark-mode.png')
+Dark mode:
+![Dashboard dark version screenshot]('./public/screenshot-dark-mode.png')
 
-    Light mode:
-    ![]('./../public/screenshot-light-mode.png')
+Light mode:
+![Dashboard light version screenshot]('./public/screenshot-light-mode.png')
 
-    ** If I had more time I would have:
+\*\* If I had more time I would have:
 
-    * Improved some components styling
-    * Added forms for creating new products
-    * Filtered search functionality
-    * Added testing (unit)
-    * Better error handling
-    * Added feature for creating new users and updating user informations
-    * And more...
+    - Improved some components styling
+    - Added forms for creating new products
+    - Filtered search functionality
+    - Added testing (unit)
+    - Better error handling
+    - Added feature for creating new users and updating user informations
+    - And more...
 
 ## Features
 
