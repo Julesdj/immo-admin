@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getCurrentUser } from "services/authn.service";
 
 let user = getCurrentUser();
-let id = user._id;
+let id = user?._id;
 
 const initialState = {
     mode: "dark",
