@@ -1,6 +1,6 @@
 # IMMO Inc. Admin Dashboard
 
-    This project is an admin dashboard for IMMO Inc., an e-commerce company. The dashboard allows for easy management of the company's products, orders, and customers.
+This project is an admin dashboard for IMMO Inc., an e-commerce company. The dashboard allows for easy management of the company's products, orders, and customers.
 
 ## Overview
 
