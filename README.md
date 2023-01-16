@@ -6,7 +6,7 @@ This project is an admin dashboard for IMMO Inc., an e-commerce company. The das
 
 I really enjoyed working on this and spent any time I could on it. It's an expandable project and for my self-development I will absolutely continue to work on it and implement more features and improvements.
 
-The project is deployed and the demo can be tested [here] --link to demo
+The project is deployed and the demo can be tested here: <https://admin.immoinc.com>
 
 Dark mode:
 ![Dashboard dark version screenshot](./public/screenshot-dark-mode.png)
@@ -44,7 +44,7 @@ Light mode:
 
 * Make sure you have Node.js installed on your machine before running the project
 * This project is dependent on a Node.js server and MongoDB Database that should be started separately
-* The server side of this project is available in a separate repository, please refer to the following link to get the server side implementation: https://github.com/Julesdj/immo-server.git
+* The server side of this project is available in a separate repository, please refer to the following link to get the server side implementation: <https://github.com/Julesdj/immo-server.git>
 
 ## Installation
 
